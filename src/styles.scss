@@ -1,0 +1,170 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./assets/scss/responsive.scss";
+@import "./assets/scss/mixin.scss";
+@import "./assets/scss/theme_color.scss";
+
+body { 
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: 0px; 
+  }
+.active{
+  color: #fbb710;
+}
+.primary {
+  color: #fbb710;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+ul li{
+  text-transform: capitalize;
+  line-height: 3;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+li:hover {
+  color: #fbb710;
+}
+li:focus {
+  outline: none;
+}
+
+.flex-box{
+background: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding: 10px 10%; 
+}
+.flex-box-transparent{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding: 0;
+}
+.free-box{
+background: #fff;
+padding: 10px;
+}
+h1,h2,h3,h4,h5,h6, .primary-label{
+color: #fbb710;
+}
+label{
+  color: #6b6b6b;
+  font-size: 14px;
+}
+p{
+  font-size: 12px;
+  color: #6b6b6b;
+  line-height: 1;
+  font-weight: 400;
+}
+
+mat-icon{
+  cursor: pointer;
+  color: #fbb710;
+}
+
+
+
+.button{
+border-radius: 0 !important;
+transition: all 0.3s ease 0s;
+background: #fff;
+color:  #fbb710 !important;
+border: 1px #fbb710 solid !important;
+}
+.button:hover {
+background-color:  #fbb710;
+color: white !important;
+border: 1px  #fbb710  solid;
+}
+button{
+border-radius: 0%;
+}
+
+
+table{
+width: 100%;
+
+}
+.mat-elevation-z8 {
+box-shadow: none;
+border: 1px #EAE9E9  solid;
+}
+
+.dashed-border{
+border: 1px #EAE9E9 dashed !important;
+}
+.table-title{
+font-size: 14px;
+height: 60px;
+line-height: 60px;
+padding-left: 25px;
+background: #fff;
+font-weight: 400;  
+}
+
+th.mat-sort-header-sorted {
+color: black;
+}
+.mat-form-field {
+font-size: 14px;
+}
+td.mat-cell, th.mat-header-cell, .mat-tab-header{
+border-bottom-color:  #EAE9E9; 
+}
+a{
+text-decoration: none;
+color:  #fbb710; 
+}
+
+p{
+font-size: 14px;
+color: gray;
+}
+
+span{
+font-size: 14px;
+}
+
+label{
+font-size: 12px;
+color: gray;
+}
+
+.primary {
+color:  #fbb710;
+}
+
+
+
+
+
+.flex-center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.notification-text{
+background-color:  #fbb710;
+}
+@media (max-width: 1080px) {
+  .container{
+    margin: 20px 10px;
+  }
+  .profile-box{
+    flex: none;
+  }
+}
+
+

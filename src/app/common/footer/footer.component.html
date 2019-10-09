@@ -1,0 +1,21 @@
+
+
+<div class="footer-box">
+    <div style="flex: 1">
+        <h3>Furniture <br>World</h3>
+    </div>
+    <div  style="flex: 1">
+        <ul class="menu">
+            <li class="menu-items" [routerLink]="item.link" routerLinkActive="active" *ngFor="let item of menu">
+                <a>{{item.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<section>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+    
+</section>

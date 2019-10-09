@@ -1,0 +1,94 @@
+<div class="container">
+
+    <div class="flex-box-transparent" style="align-items: unset; ">
+        <div class="flex-box-transparent" style="flex: 2; margin-right: 20px; padding: 0px 20px;flex-direction: column;">
+           <div class="free-box dashed-border" style="width: 100%;"> 
+            <h5>Cart Details</h5>
+            <table>
+                <tr style="text-align: center;">
+                    <th></th>
+                    <th>
+                        <label>Title</label>
+                    </th>
+                    <th>
+                        <label>Price</label>
+                    </th>
+                    <th>
+                            <label>Quantity</label>
+                    </th>
+                    <th>
+                            <label>Remove</label>
+                    </th>
+                    
+                </tr>
+                <tr style="text-align: center;" *ngFor="let item of cart">
+                    <td><img src="{{item.img}}" width="80" height="80"></td>
+                    <td><span>{{item.title}}</span></td>
+                    <td><span>{{item.price}}</span></td>
+                    <td> <input type="number" value="50" style="width: 50px; height: 30px; text-align: center;" /></td>
+                    <td><a><mat-icon (click)="removeItem(item.id)" class="material-icons-outlined">delete_outline</mat-icon></a></td>
+                    
+                </tr>
+            </table>
+           </div>
+            <div class="free-box dashed-border"  style="width: 100%; margin-top: 20px">
+                <h5>Your billing Address</h5>
+                <div class="address-form">
+                        <form [formGroup]="addressForm">
+                
+                            <div class="flex-box" style="padding: 10px 20px">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>First name</mat-label>
+                                    <input matInput formControlName="firstName" placeholder="Enter your first name">
+                                </mat-form-field>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Last name</mat-label>
+                                    <input matInput formControlName="lastName" placeholder="Enter your last name">
+                                </mat-form-field>
+                            </div>
+                            <div class="flex-box" style="padding: 10px 20px">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Pincode</mat-label>
+                                    <input matInput formControlName="pincode" placeholder="Enter your pincode">
+                                </mat-form-field>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Locality</mat-label>
+                                    <input matInput formControlName="locality" placeholder="Enter locality">
+                                </mat-form-field>
+                            </div>
+                            <mat-form-field appearance="outline" style="width: 92%; padding: 10px 20px;">
+                                <mat-label>Address</mat-label>
+                                <textarea matInput formControlName="address" placeholder="Enter full address"></textarea>
+                            </mat-form-field>
+                            <div class="flex-box" style="padding: 10px 20px">
+                                <button mat-button mat-stroked-button  class="button">SAVE
+                                </button>
+                            </div>
+                
+                        </form>
+                    </div>
+            </div>
+        </div>
+        <div class="free-box dashed-border" style="flex: 1;  height: 100%;">
+            <h5 style="margin-left: 20px">Cart Total</h5>
+            <div class="flex-box">
+                <span>Subtotal</span>
+                <span>234234</span>
+            </div>
+            <div class="flex-box">
+                <span>GST</span>
+                <span>34%</span>
+            </div>
+            <div class="flex-box">
+                <span>Total</span>
+                <span>23232</span>
+            </div>
+            <div style="text-align: center; margin-top: 50px">
+                <button  mat-button mat-stroked-button class="button" style="width: 100%"
+                    (click)="payButton()">Pay Now
+                </button>
+            </div>
+        </div>
+    </div>
+  
+</div>

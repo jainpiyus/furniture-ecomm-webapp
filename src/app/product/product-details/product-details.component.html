@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-50">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Furniture</a></li>
+                    <li class="breadcrumb-item"><a href="#">Chairs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">white modern chair</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="margin-right: 25px;">
+            <img [src]="(imgPath + imgFileName)" width="500px" height="550px" style="margin-bottom:25px; "
+                (click)="onProductClick()">
+        </div>
+        <div style="margin-right: 25px;">
+            <div>
+                <div>
+                    <div class="line"></div>
+                    <p class="product-price">$180</p>
+                    <h6 style="font-size: 30px; margin-bottom: 5px">White Modern Chair</h6>
+                    <!-- Ratings & Review -->
+                    <div class="mb-15 d-flex align-items-center justify-content-between">
+                        <div>
+                            <mat-icon style="font-size: 15px;" color="warn">star</mat-icon>
+                            <mat-icon style="font-size: 15px;" color="warn">star</mat-icon>
+                            <mat-icon style="font-size: 15px;" color="warn">star</mat-icon>
+                            <mat-icon style="font-size: 15px;" color="warn">star</mat-icon>
+                        </div>
+                        <div class="review">
+                            <label>Write A Review</label>
+                        </div>
+                    </div>
+                    <!-- Avaiable -->
+                    <div style="display:flex; flex-wrap: wrap;">
+                        <mat-icon style="margin-right:10px; font-size: 20px;">done</mat-icon>
+                        <p style="padding-top: 5px;" class="avaibility">In Stock</p>
+                    </div>
+                </div>
+
+                <div class="short_overview my-5">
+                    <span style="line-height: 2.1; color: #6b6b6b;">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi
+                        reprehenderit consequatur, autem, nostrum pariatur enim?</span>
+                </div>
+
+                <!-- Add to Cart Form -->
+                <div class="d-flex mb-50">
+                    <p class="qty">Qty</p>
+                    <div class="quantity">
+                        <span class="qty-minus"
+                            onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;">
+                            <mat-icon style="font-size: 28px;">arrow_drop_down</mat-icon>
+                        </span>
+                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity"
+                            value="1">
+                        <span class="qty-plus"
+                            onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;">
+                            <mat-icon style="font-size: 28px;">arrow_drop_up</mat-icon>
+                        </span>
+                    </div>
+                </div>
+                <button name="addtocart" value="5" class="btn add-cart-btn">Add to cart</button>
+
+            </div>
+        </div>
+    </div>
+    <div style="display:flex; flex-wrap: wrap; margin-bottom: 50px;">
+        <div *ngFor="let image of imageArr; let i = index">
+            <img [src]="image.imgData" width="150px" height="150px"
+                style="margin-right:25px; border: 2px solid #fbb710;" (click)="onImageClick(i)">
+        </div>
+    </div>
+</div>

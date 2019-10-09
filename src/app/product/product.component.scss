@@ -1,0 +1,59 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.filters{
+    padding: 100px 40px;
+}
+.filters{
+    margin-bottom: 50px 
+}
+.filters h6{
+    margin-bottom: 30px;
+}
+.filters ul{
+    padding: 0;
+}
+.catagory{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #242424;
+}
+.filters ul li {
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 0px 0 15px 20px;
+    display: block;
+    font-weight: 400;
+}
+.mb-25{
+    margin-bottom: 25px;
+    margin-left: 40px;
+}
+.color-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.round{
+    border-radius: 50%;
+    width: 30px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+.line {
+    width: 80px;
+    height: 3px;
+    background-color: #fbb710;
+    margin-bottom: 15px;
+    display: block;
+}
+.product-price {
+    line-height: 1;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+::ng-deep .mat-icon{
+    width: 15px;
+}

@@ -1,0 +1,10 @@
+<div class="container" style="min-width: 300px;">
+    <h2 style="margin-top: 40px;">
+        <img src="assets/bg-img/logo.png"/>
+    </h2>
+    <ul class="menu">
+        <li class="menu-items" [routerLink]="item.link" routerLinkActive="active" *ngFor="let item of sideNavMenu" style="padding: 0px 0 15px 0px;">
+            <a>{{item.title}}</a>
+        </li>
+    </ul>
+</div>

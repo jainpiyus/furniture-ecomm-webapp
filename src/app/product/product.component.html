@@ -1,0 +1,75 @@
+<div class="wrapper">
+    <div class="filters" style="flex:1; background-color: #f5f7fa; margin-right: 10px; max-width: 230px;">
+        <h6 class="catagory">Catagories</h6>
+        <ul>
+            <li>Beds</li>
+            <li>Accesories</li>
+            <li>Furniture</li>
+            <li>Home Deco</li>
+            <li>Dressings</li>
+            <li>Tables</li>
+        </ul>
+        <h6 class="catagory">Brands</h6>
+        <div class="mb-25">
+            <input class="form-check-input" type="checkbox" value="" id="amado">
+            <label class="form-check-label" for="amado">Amado</label>
+        </div>
+        <div class="mb-25">
+            <input class="form-check-input" type="checkbox" value="" id="ikea">
+            <label class="form-check-label" for="ikea">Ikea</label>
+        </div>
+        <div class="mb-25">
+            <input class="form-check-input" type="checkbox" value="" id="furniture">
+            <label class="form-check-label" for="furniture">Furniture Inc</label>
+        </div>
+        <div class="mb-25">
+            <input class="form-check-input" type="checkbox" value="" id="factory">
+            <label class="form-check-label" for="factory">The factory</label>
+        </div>
+        <div class="mb-25">
+            <input class="form-check-input" type="checkbox" value="" id="artdeco">
+            <label class="form-check-label" for="artdeco">Artdeco</label>
+        </div>
+        <h6 class="catagory">Color</h6>
+        <div>
+            <ul class="color-list" style="list-style:none">
+                <li><a href="#" class="round" style="background-color:#dc0647;"></a></li>
+                <li><a href="#" class="round" style="background-color:pink;"></a></li>
+                <li><a href="#" class="round" style="background-color:white;"></a></li>
+                <li><a href="#" class="round" style="background-color:black;"></a></li>
+                <li><a href="#" class="round" style="background-color:#f26e51;"></a></li>
+                <li><a href="#" class="round" style="background-color:yellow;"></a></li>
+                <li><a href="#" class="round" style="background-color:purple;"></a></li>
+                <li><a href="#" class="round" style="background-color:blue;"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="images" style="flex:4; flex-wrap: wrap; display: flex;">
+        <div *ngFor="let product of products">
+            <img mat-card-image src="{{product.image}}" width="300" height="350" style="margin-right:25px;"
+                (click)="onProductClick()">
+
+            <div style="margin-top: 25px; display: flex; justify-content: space-between;">
+                <div>
+                    <div class="line"></div>
+                    <p class="product-price primary">{{product.price}} INR</p>
+                    <h6>{{product.name}}</h6>
+                </div>
+
+                <div>
+                    <div style="margin-right: 45px; display: flex;">
+                        <div *ngFor='let in of counter(5) ;let i = index'>
+                            <mat-icon [ngStyle]="{'color': (i > product.rating - 1) ? 'burlywood' : '#fbb710'}"
+                                style="font-size: 15px;" color="warn">star</mat-icon>
+                        </div>
+                    </div>
+                    <div>
+                        <mat-icon style="font-size: 30px; margin-top: 13px; margin-left: 30px;">add_shopping_cart
+                        </mat-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.sidenav-container{
+    min-height: 500px;
+}
+// .sidenav-drawer{
+//     width: 330px;
+//     overflow-y: hidden;
+//     overflow-x: hidden;
+
+// }
+mat-drawer-container { 
+    flex: 1 1 auto;
+    border: none;
+    background: white;
+ }
+//  mat-drawer-content{
+//     overflow-y: hidden;
+//     overflow-x: hidden;
+//  }
+
+ .cart-button{
+    position: fixed;
+    top: 85%;
+    right: 2%;
+    text-align: right;
+    z-index: 9999;
+ }

@@ -1,0 +1,43 @@
+
+.category-box{
+        position: relative;
+        cursor: pointer;
+}
+
+  img {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .middle {
+    transition: .5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: start;
+  }
+  
+ 
+  .category-box:hover img {
+    opacity: 0.3;
+  }
+  .category-box:hover {
+    background: #212529;
+    p {
+      color: white !important;
+    }
+  }
+
+  .category-box:hover .middle {
+    opacity: 1;
+    color: white
+  }
+  p{
+      font-size: 20px;
+  }
+  
+  

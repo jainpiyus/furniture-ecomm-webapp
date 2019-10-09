@@ -1,0 +1,13 @@
+
+ <mat-drawer-container hasBackdrop="false" class="sidenav-container">
+    <mat-drawer #drawer class="sidenav-drawer" mode="side" style=" overflow: hidden; border: none;" position="start"
+        opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header (sidenav)='toggelNavbar($event)'></app-header>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer> 
+

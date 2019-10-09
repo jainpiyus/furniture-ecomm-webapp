@@ -1,0 +1,11 @@
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+      <div *ngFor="let item of categories" class="category-box" (click) = "onProductClick()">
+          <img mat-card-image src="{{item.image}}" mat-card-image width="300" height="350">
+          <div class="middle">
+            <span style="border-top: 2.5px solid #fbb710;">From {{item.from}} INR</span><br>
+            <span style="font-size: 20px;">{{item.name}}</span>
+          </div>
+    </div>
+ </div>
+ 
+ 

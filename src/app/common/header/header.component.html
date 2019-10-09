@@ -1,0 +1,15 @@
+<div style="display: flex; justify-content: space-between; align-items: center; height: 70px; padding-left: 10px;">
+
+    <div style="flex: 1">
+        <mat-icon (click)="toggelSidenav()" >menu</mat-icon>
+    </div>
+   
+    <div style="flex: 1;text-align: end;margin-right: 5%;">
+        <mat-form-field color="warn" style="margin-right: 30px;">
+            <input matInput placeholder="Search any product...">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <a routerLink="/checkout" style="margin-right: 30px;"> <mat-icon matBadge="15" matBadgeColor="warn" matBadgeOverlap="false"  outline>shopping_cart</mat-icon></a>
+        <mat-icon (click) = "openLoginDialog()" >emoji_people</mat-icon>
+    </div>
+</div>
