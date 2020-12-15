@@ -20,17 +20,10 @@ export class SidebarComponent {
      title: 'PRODUCTS',
      link: 'product'
    },
+
    {
-     title: 'IMAGES',
-     link: '/products'
-   },
-   {
-     title: 'CONTACT-US',
-     link: '/products'
-   },
-   {
-    title: 'CART',
-    link: '/products'
+    title: 'CHECKOUT',
+    link: '/checkout'
   }
   ];
   constructor() {

@@ -14,13 +14,13 @@
     <div style="display: flex;">
         <div style="margin-right: 25px;">
             <img [src]="(imgPath + imgFileName)" width="500px" height="550px" style="margin-bottom:25px; "
-                (click)="onProductClick()">
+                >
         </div>
         <div style="margin-right: 25px;">
             <div>
                 <div>
                     <div class="line"></div>
-                    <p class="product-price">$180</p>
+                    <p class="product-price">{{180 | currency: 'INR'}}</p>
                     <h6 style="font-size: 30px; margin-bottom: 5px">White Modern Chair</h6>
                     <!-- Ratings & Review -->
                     <div class="mb-15 d-flex align-items-center justify-content-between">

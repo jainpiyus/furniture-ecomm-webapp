@@ -25,6 +25,7 @@
     padding: 0px 0 15px 20px;
     display: block;
     font-weight: 400;
+    transition: 0.5s;
 }
 .mb-25{
     margin-bottom: 25px;
@@ -53,6 +54,7 @@
     line-height: 1;
     font-size: 24px;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 ::ng-deep .mat-icon{
     width: 15px;
